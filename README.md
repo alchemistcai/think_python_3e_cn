@@ -1,4 +1,4 @@
-# ThinkPython 第3版笔记
+# ThinkPython 第3版
 
 由Allen B. Downey原作的*像计算机科学家一样思考python*第3版的Jupyter笔记及其他材料.
 
