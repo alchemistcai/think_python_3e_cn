@@ -17,3 +17,8 @@
 
 - 代码:[MIT](https://mit-license.org/)
 - ipynb文本:[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+## 如何使用本仓库
+
+- 如果你会用git,`git clone https://gitee.com/regentsai/Think_Python_3e_CN.git`将本仓库下载至本地,`git pull --force`进行更新
+- 如果你没有用过git,可以在[本仓库的gitee页面](https://gitee.com/regentsai/Think_Python_3e_CN)在线阅读,自行创建笔记并跟随演示内容操作；或者等仓库更新结束后在该页面下载压缩包
