@@ -87,7 +87,7 @@ _commands = {}
 
 # decorators to build procedural API with turtle commands
 def command(method):
-    """register method for use as a top level function in procedural API"""
+    """在过程API中注册函数为顶级函数。"""
     _commands[method.__name__] = []  # no alias
     return method
 
