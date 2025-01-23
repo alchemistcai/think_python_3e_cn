@@ -3,16 +3,16 @@
 import math
 from itertools import combinations
 from pprint import pprint
-from multiprocessing import Pool,cpu_count,Manager
+from multiprocessing import Pool,cpu_count
 from typing import Iterable
 
 ava_comb = math.comb(26, 7)
 '''26个字母中7个字母的组合数.'''
 
 def is_acc(word: str, available: Iterable[str], required: str) -> bool:
-    '''检查`word`是否由`available`中的字母组成，并包含`required`字母.
+    '''检查`word`是否由`available`中的字母组成，并包含`required`字母。
 
-    `word`长度必须>=4.
+    `word`长度必须>=4。
 
     `available`必须是7个不同的字母的组合。
 
@@ -23,9 +23,9 @@ def is_acc(word: str, available: Iterable[str], required: str) -> bool:
 
 def score_acc(word: str) -> int:
     '''计算字谜`available`的`word`的分值，假定`word`符合要求。'''
-    # pangram必然集合长度为7
     if len(word)==4:
         return 1
+    # pangram必然集合长度为7
     return len(word) + 7*int(len(set(word))==7)
 
 
@@ -60,6 +60,6 @@ with open('words.txt', 'r+') as file:
     max_words = [
         word for word in words if is_acc(word, max_ava, max_req) if len(set(word))==7
     ]  # 出于内存和速度考虑，循环内使用生成器，此处仅显示pangram
-    max_words.sort(key=lambda x:score_acc(x),reverse=True)
+    max_words.sort(key=score_acc,reverse=True)
     print(f'分数最多的字谜pangram共{len(max_words)}个,前20高分的pangram为：')
     pprint(max_words[:20])
